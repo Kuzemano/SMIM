@@ -1,0 +1,51 @@
+# ==========================================
+# 1. IGNORE ENTIRE FOLDERS (Everywhere)
+# ==========================================
+# Ignores any folder named 'node_modules' or 'build' at any directory level
+node_modules/
+build/
+dist/
+
+# ==========================================
+# 2. IGNORE SPECIFIC FILES (Everywhere)
+# ==========================================
+# Ignores these specific files regardless of where they are in the project
+.DS_Store
+Thumbs.db
+.env
+
+# ==========================================
+# 3. IGNORE SPECIFIC FILES IN SPECIFIC FOLDERS
+# ==========================================
+# Ignores 'secrets.json' ONLY inside the root 'config/' folder
+/config/secrets.json
+
+# Ignores 'cache.db' ONLY inside any 'data/' folder
+data/cache.db
+
+# Ignores 'id_rsa' (private key) ONLY inside the '.ssh/' folder at the root
+/.ssh/id_rsa
+
+# ==========================================
+# 4. IGNORE FOLDER/FILE PATTERNS (Wildcards)
+# ==========================================
+# Ignore all log files anywhere in the project
+*.log
+
+# Ignore all compiled Python files anywhere
+*.pyc
+__pycache__/
+
+# Ignore all .tmp files inside any subfolder of 'uploads' (using double asterisk **)
+uploads/**/*.tmp
+
+# Ignore all temporary text files matching 'temp1.txt', 'tempA.txt', etc.
+temp?.txt
+
+# ==========================================
+# 5. EXCEPTIONS (Negation / Un-ignoring)
+# ==========================================
+# Ignore all files in the 'logs/' folder...
+logs/*
+# ...BUT do not ignore 'important.log' inside that folder
+!logs/important.log
